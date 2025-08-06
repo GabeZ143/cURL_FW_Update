@@ -1,0 +1,35 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">
+      http://docs.oasis-open.org/wsn/bw-2/SubscriptionManager/RenewRequest
+    </a:Action>
+    <a:MessageID>urn:uuid:1f9a6729-c34d-41b6-95b5-bd0195a100cf</a:MessageID>
+    <a:ReplyTo>
+      <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+    </a:ReplyTo>
+    <Security s:mustUnderstand="1"
+      xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <UsernameToken>
+        <Username>admin</Username>
+        <Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest">
+          NnEV0oFsrLIDvOu9opR6vzRN0fQ=
+        </Password>
+        <Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">
+          QX6ykaXgZUiIxjzsWqK2PoABAAAAAA==
+        </Nonce>
+        <Created xmlns="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+          2025-08-04T18:36:43.924Z
+        </Created>
+      </UsernameToken>
+    </Security>
+    <a:To s:mustUnderstand="1">
+      http://192.168.99.10/Subscription?Idx=38a8fa50-7161-11f0-9bd7-21d549bcae72
+    </a:To>
+  </s:Header>
+  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Renew xmlns="http://docs.oasis-open.org/wsn/b-2">
+      <TerminationTime>PT1M</TerminationTime>
+    </Renew>
+  </s:Body>
+</s:Envelope>
